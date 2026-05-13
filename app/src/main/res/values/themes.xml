@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="Theme.AirFloat" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_cyberpunk</item>
+        <item name="android:statusBarColor">@color/obsidian_950</item>
+        <item name="android:navigationBarColor">@color/obsidian_950</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="colorPrimary">@color/amber_500</item>
+        <item name="colorAccent">@color/moss_400</item>
+    </style>
+
+</resources>

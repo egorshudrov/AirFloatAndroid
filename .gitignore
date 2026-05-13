@@ -1,0 +1,55 @@
+# Gradle
+.gradle/
+.gradle-user/
+build/
+*/build/
+
+# Android Studio
+.idea/
+*.iml
+
+# Local config
+local.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python
+.venv/
+.venv39/
+__pycache__/
+
+# Codex / local tooling
+.codex_backups/
+.kotlin/
+
+# Media
+*.mp4
+*.avi
+*.mov
+
+# Builds
+*.apk
+*.aab
+*.apks
+*.idsig
+
+# Release signing material must be owned by the publisher
+*.jks
+*.keystore
+keystore.properties
+
+# Local generated / research data not required to build or publish the app
+pushup_dataset/
+situp_dataset/
+gradle/gradle-daemon-jvm.properties
+
+# Local exports and diagnostics
+airfloat_body_metrics.xml
+airfloat_session_stats.xml
+raw_logcat.txt
+situp_not_counted.txt

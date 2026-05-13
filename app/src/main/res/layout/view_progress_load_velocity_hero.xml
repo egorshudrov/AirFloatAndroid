@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="318dp">
+
+    <LinearLayout
+        android:id="@+id/progressHeroContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="318dp"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/progressHeroRangeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/progress_filter_active"
+                android:fontFamily="monospace"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:text="RANGE 7D"
+                android:textAllCaps="true"
+                android:textColor="@color/hud_text_primary"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/progressHeroStateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/progress_hero_state_plateau"
+                android:fontFamily="monospace"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:text="PLATEAU SIGNAL"
+                android:textAllCaps="true"
+                android:textColor="@color/hud_text_primary"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/progressHeroMetricLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="monospace"
+            android:text="LOAD VELOCITY"
+            android:textAllCaps="true"
+            android:textColor="#555555"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/progressHeroLoadValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:text="+0%"
+            android:textAllCaps="true"
+            android:textColor="@color/amber_score"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/progressHeroTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif-medium"
+            android:includeFontPadding="false"
+            android:text="BARBELL PRESS IS YOUR STRONGEST SIGNAL"
+            android:textColor="@color/hud_text_primary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/progressHeroSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="monospace"
+            android:text="→0% vs last 7d — 0 sessions, 0 reps"
+            android:textColor="@color/hud_text_secondary"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/progress_metric_tile"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="PRECISION"
+                    android:textAllCaps="true"
+                    android:textColor="@color/hud_text_secondary"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progressHeroPrecisionValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:text="0%"
+                    android:textColor="@color/hud_text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/progressHeroPrecisionDelta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="→ flat vs prev"
+                    android:textAllCaps="true"
+                    android:textColor="@color/hud_text_secondary"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/progress_metric_tile"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="CADENCE"
+                    android:textAllCaps="true"
+                    android:textColor="@color/hud_text_secondary"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progressHeroCadenceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:text="0/7"
+                    android:textColor="@color/hud_text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/progressHeroCadenceDelta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="→ same session pace"
+                    android:textAllCaps="true"
+                    android:textColor="@color/hud_text_secondary"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/progress_metric_tile"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="AVG REPS"
+                    android:textAllCaps="true"
+                    android:textColor="@color/hud_text_secondary"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progressHeroAvgRepsValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:text="0"
+                    android:textColor="@color/hud_text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/progressHeroAvgRepsDelta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="→ same avg output"
+                    android:textAllCaps="true"
+                    android:textColor="@color/hud_text_secondary"
+                    android:textSize="9sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/progressHeroPulseOverlay"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:alpha="0"
+        android:background="@drawable/progress_hero_pulse_overlay"
+        android:scaleX="0.6"
+        android:scaleY="0.6" />
+
+    <View
+        android:id="@+id/progressHeroShockwave"
+        android:layout_width="132dp"
+        android:layout_height="132dp"
+        android:layout_gravity="center"
+        android:alpha="0"
+        android:background="@drawable/progress_hero_shockwave"
+        android:scaleX="0.86"
+        android:scaleY="0.86" />
+</FrameLayout>

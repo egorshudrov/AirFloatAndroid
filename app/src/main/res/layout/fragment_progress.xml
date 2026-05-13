@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="18dp"
+    android:paddingTop="22dp"
+    android:paddingEnd="18dp"
+    android:paddingBottom="112dp">
+
+    <ScrollView
+        android:id="@+id/progressScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/progressHeaderMicroLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.14"
+                android:text="PROGRESS"
+                android:textAllCaps="true"
+                android:textColor="@color/bone_200"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/progressHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif-condensed"
+                android:includeFontPadding="false"
+                android:text="MAPS"
+                android:textAllCaps="true"
+                android:textColor="@color/hud_text_primary"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/progressExerciseScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/progressExerciseTabRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/progressExercisePressTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:background="@drawable/progress_selector_active"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:text="BARBELL"
+                        android:textAllCaps="true"
+                        android:textColor="@color/obsidian_950"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/progressExerciseDumbbellTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/progress_selector_idle"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:text="DUMBBELL"
+                        android:textAllCaps="true"
+                        android:textColor="@color/hud_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/progressExercisePushupTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/progress_selector_idle"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:text="PUSH-UP"
+                        android:textAllCaps="true"
+                        android:textColor="@color/hud_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/progressExerciseSitupTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/progress_selector_idle"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:text="SIT-UP"
+                        android:textAllCaps="true"
+                        android:textColor="@color/hud_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/progressExerciseSquatTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/progress_selector_idle"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:text="SQUATS"
+                        android:textAllCaps="true"
+                        android:textColor="@color/hud_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/progressLatestSessionCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/progress_minimal_card"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/progressLatestSectionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.14"
+                    android:text="LATEST SESSION MAP"
+                    android:textAllCaps="true"
+                    android:textColor="@color/bone_200"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/progressLatestSessionTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:text="BARBELL PRESS"
+                            android:textAllCaps="true"
+                            android:textColor="@color/hud_text_primary"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/progressLatestSessionMeta"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="monospace"
+                            android:maxLines="1"
+                            android:text="26 MAR · 6 ATTEMPTS"
+                            android:textAllCaps="true"
+                            android:textColor="@color/bone_200"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <com.airfloat.app.ui.charts.MlScoreRingView
+                        android:id="@+id/progressLatestSessionRing"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:layout_marginStart="14dp" />
+                </LinearLayout>
+
+                <com.airfloat.app.ui.charts.LatestSessionAttemptsChartView
+                    android:id="@+id/progressLatestSessionChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/progressLatestAttemptCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/progress_minimal_subcard"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/progressLatestAttemptTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="ATTEMPT 01"
+                            android:textAllCaps="true"
+                            android:textColor="@color/hud_text_primary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/progressLatestAttemptBadge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/progress_attempt_badge"
+                            android:fontFamily="monospace"
+                            android:paddingStart="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="4dp"
+                            android:text="CLEAN"
+                            android:textAllCaps="true"
+                            android:textColor="@color/obsidian_950"
+                            android:textSize="9sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/progressLatestAttemptMeta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="monospace"
+                        android:maxLines="1"
+                        android:text="Rep 1 locked · 00:12 · 1.60 KCAL"
+                        android:textColor="@color/bone_200"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/progressLatestAttemptDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:maxLines="2"
+                        android:text="Clean rep path."
+                        android:textColor="@color/hud_text_primary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.airfloat.app.ui.ConsistencyCalendarView
+                android:id="@+id/progressConsistencyCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

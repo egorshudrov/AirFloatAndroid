@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="obsidian_950">#FF0A0A0B</color>
+    <color name="obsidian_900">#FF101114</color>
+    <color name="obsidian_850">#FF15171B</color>
+    <color name="obsidian_800">#FF1A1D21</color>
+    <color name="obsidian_700">#FF242A30</color>
+    <color name="surface_fill_4">#0AFFFFFF</color>
+    <color name="surface_fill_8">#14FFFFFF</color>
+    <color name="surface_border_8">#14FFFFFF</color>
+    <color name="surface_border_12">#1FFFFFFF</color>
+    <color name="glass_white_soft">#26FFFFFF</color>
+    <color name="glass_white_edge">#4DFFFFFF</color>
+    <color name="glass_white_glow">#91FFFFFF</color>
+    <color name="bone_50">#FFF0EDE8</color>
+    <color name="bone_200">#FFC9C0B3</color>
+    <color name="bone_300">#FFD9C8B5</color>
+    <color name="amber_400">#FFD59B55</color>
+    <color name="amber_500">#FFC78644</color>
+    <color name="amber_600">#FFA96D35</color>
+    <color name="amber_score">#FFEF9F27</color>
+    <color name="moss_400">#FF8FD09A</color>
+    <color name="coral_400">#FFE1766A</color>
+    <color name="frost_300">#FFDCE8F0</color>
+    <color name="acid_lime_400">#FFE8FF47</color>
+    <color name="acid_lime_soft">#26E8FF47</color>
+    <color name="acid_lime_border">#4DE8FF47</color>
+    <color name="danger_400">#FFFF4D4D</color>
+    <color name="success_400">#FF47FFB2</color>
+    <color name="hud_text_primary">#FFF0EDE8</color>
+    <color name="hud_text_secondary">#73F0EDE8</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

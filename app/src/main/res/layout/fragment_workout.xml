@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/trainContentScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="84dp">
+
+            <LinearLayout
+                android:id="@+id/prestartHero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_prestart_hero"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingStart="12dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="18dp">
+
+                <LinearLayout
+                    android:id="@+id/titleBlock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/logoScene"
+                        android:layout_width="match_parent"
+                        android:layout_height="232dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false">
+
+                        <FrameLayout
+                            android:id="@+id/exerciseHeroVisualFrame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/exercise_visual_clip"
+                                android:clipToOutline="true"
+                                android:foreground="@drawable/exercise_visual_outline">
+
+                                <ImageView
+                                    android:id="@+id/exerciseHeroImageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:adjustViewBounds="false"
+                                    android:contentDescription="Selected exercise preview"
+                                    android:scaleType="centerCrop" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/titleGlowText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:alpha="0.72"
+                            android:fontFamily="sans-serif-condensed"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.16"
+                            android:rotation="-7"
+                            android:rotationX="44"
+                            android:shadowColor="#D4E18B58"
+                            android:shadowDx="0"
+                            android:shadowDy="18"
+                            android:shadowRadius="34"
+                            android:text="AIRFLOAT"
+                            android:textAllCaps="true"
+                            android:textColor="#FFF09B68"
+                            android:textSize="48sp"
+                            android:textStyle="bold"
+                            android:translationY="14dp" />
+
+                        <TextView
+                            android:id="@+id/titleText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="sans-serif-condensed"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.14"
+                            android:rotation="-7"
+                            android:rotationX="28"
+                            android:shadowColor="#73FFFFFF"
+                            android:shadowDx="0"
+                            android:shadowDy="-3"
+                            android:shadowRadius="18"
+                            android:text="AIRFLOAT"
+                            android:textAllCaps="true"
+                            android:textColor="@color/hud_text_primary"
+                            android:textSize="48sp"
+                            android:textStyle="bold" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/subtitleText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="2"
+                        android:text="MANUAL SESSION"
+                        android:textColor="@color/hud_text_primary"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/chooseExerciseButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/workout_choose_button"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="18dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="18dp"
+                        android:paddingBottom="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:letterSpacing="0.14"
+                            android:text="CHOOSE YOUR EXERCISE"
+                            android:textAllCaps="true"
+                            android:textColor="@color/bone_200"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/chooseExerciseValueText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:includeFontPadding="false"
+                                android:text="BARBELL PRESS"
+                                android:textAllCaps="true"
+                                android:textColor="@color/hud_text_primary"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/chooseExerciseChevronText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="›"
+                                android:textColor="@color/bone_200"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actionRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/goalShell"
+                        android:layout_width="132dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/workout_goal_compact"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:letterSpacing="0.14"
+                            android:text="REPS"
+                            android:textAllCaps="true"
+                            android:textColor="@color/bone_200"
+                            android:textSize="9sp" />
+
+                        <LinearLayout
+                            android:id="@+id/goalRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/repsMinusButton"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:background="@drawable/workout_goal_step_button"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="−"
+                                android:textColor="@color/hud_text_primary"
+                                android:textSize="16sp" />
+
+                            <EditText
+                                android:id="@+id/repsValueInput"
+                                android:layout_width="38dp"
+                                android:layout_height="24dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="monospace"
+                                android:gravity="center"
+                                android:hint="FREE"
+                                android:imeOptions="actionDone"
+                                android:importantForAutofill="no"
+                                android:includeFontPadding="false"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:maxLines="1"
+                                android:padding="0dp"
+                                android:textColor="@color/hud_text_primary"
+                                android:textColorHint="@color/bone_200"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/repsPlusButton"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:background="@drawable/workout_goal_step_button"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="+"
+                                android:textColor="@color/hud_text_primary"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/goButton"
+                        android:layout_width="0dp"
+                        android:layout_height="72dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/workout_start_button"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp">
+
+                        <TextView
+                            android:id="@+id/goButtonPlayText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="▶"
+                            android:textColor="@color/obsidian_950"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/goButtonLabelText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.12"
+                            android:text="START SESSION"
+                            android:textAllCaps="true"
+                            android:textColor="@color/obsidian_950"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/prestartControlsColumn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rep_gauge_panel"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingStart="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="18dp">
+
+                <TextView
+                    android:id="@+id/workoutSetupTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.06"
+                    android:text="LOCK YOUR SETUP"
+                    android:textAllCaps="true"
+                    android:textColor="@color/hud_text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/workoutSetupSummaryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:text="Everything you need before the first rep."
+                    android:textColor="@color/bone_200"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/squatShadowButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/workout_start_button"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <TextView
+                        android:id="@+id/workoutSetupQualityIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:text="A"
+                        android:textAllCaps="true"
+                        android:textColor="@color/obsidian_950"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/workoutSetupQualityLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Exercise AI"
+                        android:textColor="@color/obsidian_950"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/workoutSetupQualityValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="monospace"
+                        android:maxLines="1"
+                        android:text="N/A"
+                        android:textAllCaps="true"
+                        android:textColor="@color/obsidian_950"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/spotifyPlaylistButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:minWidth="236dp"
+                    android:background="@drawable/workout_start_button"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="22dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="22dp"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/workoutSetupPlaylistIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:includeFontPadding="false"
+                            android:text="♫"
+                            android:textColor="@color/obsidian_950"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/workoutSetupPlaylistLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:includeFontPadding="false"
+                            android:text="PLAY PLAYLIST"
+                            android:textAllCaps="true"
+                            android:textColor="@color/obsidian_950"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/workoutSetupPlaylistValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="monospace"
+                        android:text="OPEN"
+                        android:textAllCaps="true"
+                        android:textColor="@color/obsidian_950"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/recordButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:minWidth="236dp"
+                    android:background="@drawable/workout_start_button"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="22dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="22dp"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/workoutSetupRecordIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:includeFontPadding="false"
+                            android:text="●"
+                            android:textColor="@color/obsidian_950"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/workoutSetupRecordLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:includeFontPadding="false"
+                            android:text="RECORD"
+                            android:textAllCaps="true"
+                            android:textColor="@color/obsidian_950"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/workoutSetupRecordValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="monospace"
+                        android:text="OFF"
+                        android:textAllCaps="true"
+                        android:textColor="@color/obsidian_950"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/recentSessionsShell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rep_gauge_panel"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:id="@+id/recentSessionsToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="236dp"
+                    android:background="@drawable/workout_start_button"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="22dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="22dp"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:includeFontPadding="false"
+                            android:text="↻"
+                            android:textColor="@color/obsidian_950"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:includeFontPadding="false"
+                            android:text="RECENT SESSIONS"
+                            android:textAllCaps="true"
+                            android:textColor="@color/obsidian_950"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/recentSessionsValueText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="NO HISTORY"
+                            android:textAllCaps="true"
+                            android:textColor="@color/obsidian_950"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/recentSessionsChevronText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="monospace"
+                            android:text="SHOW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/obsidian_950"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/recentSessionsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/exerciseChooserOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="#B3101014"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/exerciseChooserSheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="18dp"
+            android:background="@drawable/workout_chooser_sheet"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:includeFontPadding="false"
+                        android:text="CHOOSE YOUR EXERCISE"
+                        android:textAllCaps="true"
+                        android:textColor="@color/hud_text_primary"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/exerciseChooserCloseButton"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/workout_chooser_close_button"
+                    android:gravity="center"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Close exercise chooser"
+                        android:src="@drawable/workout_chooser_close_icon"
+                        android:tint="@color/bone_200" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/exerciseChooserList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

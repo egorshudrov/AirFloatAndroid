@@ -1,0 +1,58 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/obsidian_950"
+                android:centerColor="#FF0E1012"
+                android:endColor="#FF14161A"
+                android:angle="315" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="#08FFFFFF"
+                android:centerColor="#00000000"
+                android:endColor="#1A000000" />
+        </shape>
+    </item>
+    <item android:left="-60dp" android:top="-140dp" android:right="110dp" android:bottom="330dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="300dp"
+                android:startColor="#14FFFFFF"
+                android:centerColor="#08FFFFFF"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+    <item android:left="-100dp" android:top="320dp" android:right="80dp" android:bottom="-120dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="360dp"
+                android:startColor="#18E8FF47"
+                android:centerColor="#08E8FF47"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+    <item android:left="160dp" android:top="-120dp" android:right="-120dp" android:bottom="360dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="280dp"
+                android:startColor="#16EF9F27"
+                android:centerColor="#08EF9F27"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+    <item android:insetLeft="14dp" android:insetTop="14dp" android:insetRight="14dp" android:insetBottom="14dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="1dp"
+                android:color="#0DFFFFFF" />
+        </shape>
+    </item>
+</layer-list>

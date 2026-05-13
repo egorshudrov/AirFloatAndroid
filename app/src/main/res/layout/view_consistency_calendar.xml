@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/consistency_calendar_card"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:id="@+id/consistencyHeaderRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/consistencyEyebrowText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.14"
+                android:text="CONSISTENCY"
+                android:textAllCaps="true"
+                android:textColor="#444444"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/consistencyMonthTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif-condensed"
+                android:includeFontPadding="false"
+                android:text="APRIL"
+                android:textAllCaps="true"
+                android:textColor="#F0EDE8"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/consistencySummaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="monospace"
+                android:text="5 workouts · 2 misses"
+                android:textColor="#444444"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/consistencyStreakValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:includeFontPadding="false"
+                android:text="7"
+                android:textColor="#E8FF47"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/consistencyStreakLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="DAY STREAK"
+                android:textAllCaps="true"
+                android:textColor="#444444"
+                android:textSize="8sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/consistencyAdherenceCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/consistency_calendar_section_shell"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/consistencyAdherenceLabelText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:text="PROGRAM ADHERENCE"
+                android:textAllCaps="true"
+                android:textColor="#444444"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/consistencyAdherenceValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:includeFontPadding="false"
+                android:text="82%"
+                android:textColor="#E8FF47"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/consistencyAdherenceTrack"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/consistency_adherence_track">
+
+            <View
+                android:id="@+id/consistencyAdherenceFill"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/consistency_adherence_fill" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/consistencyProgramPillsRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/consistencyPillMon"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="MON"
+                android:textColor="#555555"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/consistencyPillTue"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="TUE"
+                android:textColor="#555555"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/consistencyPillWed"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="WED"
+                android:textColor="#555555"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/consistencyPillThu"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="THU"
+                android:textColor="#555555"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/consistencyPillFri"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="FRI"
+                android:textColor="#555555"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/consistencyPillSat"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="SAT"
+                android:textColor="#555555"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/consistencyPillSun"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="SUN"
+                android:textColor="#555555"
+                android:textSize="8sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/consistencyMonthNavRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/consistencyPrevMonthButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/consistency_calendar_nav_button"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="‹"
+            android:textColor="#F0EDE8"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/consistencyNavMonthText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="APRIL 2025"
+            android:textAllCaps="true"
+            android:textColor="#F0EDE8"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/consistencyNextMonthButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/consistency_calendar_nav_button"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="›"
+            android:textColor="#F0EDE8"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/consistencyWeekdayRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="MON"
+            android:textColor="#333333"
+            android:textSize="8sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="TUE"
+            android:textColor="#333333"
+            android:textSize="8sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="WED"
+            android:textColor="#333333"
+            android:textSize="8sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="THU"
+            android:textColor="#333333"
+            android:textSize="8sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="FRI"
+            android:textColor="#333333"
+            android:textSize="8sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="SAT"
+            android:textColor="#4DE8FF47"
+            android:textSize="8sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="SUN"
+            android:textColor="#4DE8FF47"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <com.airfloat.app.ui.ConsistencyCalendarGridView
+        android:id="@+id/consistencyCalendarGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <FrameLayout
+        android:id="@+id/consistencyDetailCardFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="14dp"
+        android:alpha="0">
+
+        <LinearLayout
+            android:id="@+id/consistencyDetailCardContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/consistencyDetailDateText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:includeFontPadding="false"
+                    android:text="18 APRIL 2025"
+                    android:textAllCaps="true"
+                    android:textColor="#F0EDE8"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/consistencyDetailBadgeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:paddingStart="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="4dp"
+                    android:text="WORKOUT"
+                    android:textAllCaps="true"
+                    android:textColor="#1D9E75"
+                    android:textSize="8sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/consistencyDetailSessionsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/consistencyDetailEmptyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="monospace"
+                android:text="No completed workout yet today."
+                android:textColor="#444444"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/consistencyDetailActionsRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/consistencyDetailTrainButton"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="TRAIN DAY"
+                    android:textAllCaps="true"
+                    android:textColor="#1D9E75"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/consistencyDetailRestButton"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="REST DAY"
+                    android:textAllCaps="true"
+                    android:textColor="#7F77DD"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/consistencyDetailClearButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="CLEAR"
+                    android:textAllCaps="true"
+                    android:textColor="#F0EDE8"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/consistencyDetailActionHintText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="monospace"
+                android:text="This date currently follows your weekly template."
+                android:textColor="#444444"
+                android:textSize="9sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/consistencyStatsRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/consistencyStatTotalTile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/consistency_calendar_section_shell"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="TOTAL"
+                android:textAllCaps="true"
+                android:textColor="#444444"
+                android:textSize="7sp" />
+
+            <TextView
+                android:id="@+id/consistencyStatTotalValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif-condensed"
+                android:includeFontPadding="false"
+                android:text="5"
+                android:textColor="#1D9E75"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/consistencyStatProgramTile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/consistency_calendar_section_shell"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="ADHERENCE"
+                android:textAllCaps="true"
+                android:textColor="#444444"
+                android:textSize="7sp" />
+
+            <TextView
+                android:id="@+id/consistencyStatProgramValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif-condensed"
+                android:includeFontPadding="false"
+                android:text="82%"
+                android:textColor="#E8FF47"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/consistencyStatMissedTile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/consistency_calendar_section_shell"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="MISSES"
+                android:textAllCaps="true"
+                android:textColor="#444444"
+                android:textSize="7sp" />
+
+            <TextView
+                android:id="@+id/consistencyStatMissedValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif-condensed"
+                android:includeFontPadding="false"
+                android:text="2"
+                android:textColor="#E24B4A"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
